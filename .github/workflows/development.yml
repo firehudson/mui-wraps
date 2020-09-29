@@ -27,5 +27,5 @@ jobs:
 
     - name: deploy
       env:
-        GH_TOKEN: ${GH_TOKEN}
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: yarn deploy-storybook -- --ci
