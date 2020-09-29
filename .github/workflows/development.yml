@@ -26,4 +26,6 @@ jobs:
       run: yarn install
 
     - name: deploy
+      env:
+        GH_TOKEN: ${GH_TOKEN}
       run: yarn deploy-storybook
