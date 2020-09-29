@@ -14,7 +14,7 @@ import { Button } from '../../stories/Button';
 const data = [
   {
     title: 'Nature Around Us',
-    description: ' We are going to learn different kinds of species in nature that live together to form amazing environment.We are going to learn different kinds of species in nature that live together to form amazing environment.'
+    description: 'We are going to learn different kinds of species in nature that live together to form amazing environment.We are going to learn different kinds of species in nature that live together to form amazing environment.'
   },
   {
     title: 'Nature Around Us',
@@ -109,13 +109,25 @@ const styles = (theme) =>
     textAlign: "left",
     textOverflow: "ellipsis",
     overflow: "hidden",
-    whiteSpace: "normal",
+    whiteSpace: "nowrap",
   },
   subtext: {
-    textOverflow: "ellipsis",
+    maxWidth: "470px",
     overflow: "hidden",
-    whiteSpace: "nowrap",
-    textAlign: 'left'
+    position: "relative",
+    // lineHeight: "1.2em",
+    maxHeight: "60px",
+    textAlign: "justify",
+    marginRight: "-1em",
+    paddingRight: "1em",
+    marginBottom: "0.5em",
+    textAlign: 'left',
+    "&&:before": {
+      content: '"..."',
+      position: "absolute",
+      right: 0,
+      bottom: 0,
+    },
   }
 });
 
